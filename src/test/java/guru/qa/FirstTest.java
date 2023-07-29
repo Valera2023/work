@@ -36,10 +36,7 @@ public class FirstTest {
 
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
-        /*
-        $("#uploadPicture").uploadFromClasspath("homework1.jpg");
-
-         */
+        $("#uploadPicture").uploadFromClasspath("Panda.jpg");
         $("#currentAddress").setValue("Moscow 111");
         $("#state").click();
         $("#react-select-3-option-1").click();
@@ -57,10 +54,7 @@ public class FirstTest {
         $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("31 May,1990"));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Maths"));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Sports"));
-        /*
-        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("homework1.jpg"));
-
-         */
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("Panda.jpg"));
         $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Moscow 111"));
         $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("Uttar Pradesh Agra"));
 
