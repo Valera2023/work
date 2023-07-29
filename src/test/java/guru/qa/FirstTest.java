@@ -17,7 +17,7 @@ public class FirstTest {
     }
 
     @Test
-    void fillFormTestClasswork() {
+    void StudentRegistrationForm() {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
@@ -36,9 +36,7 @@ public class FirstTest {
 
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
-        /*
-        $("#uploadPicture").uploadFromClasspath("homework1.png");
-         */
+        $("#uploadPicture").uploadFromClasspath("homework1.jpg");
         $("#currentAddress").setValue("Moscow 111");
         $("#state").click();
         $("#react-select-3-option-1").click();
@@ -49,15 +47,15 @@ public class FirstTest {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
-        $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Marina Horuzhaya"));
-        $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("marinakh192@gmail.com"));
-        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Female"));
-        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("8076009123"));
-        $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("19 August,2002"));
+        $(".table-responsive").$(byText("Student Name")).parent().shouldHave(text("Ivan Ivanov"));
+        $(".table-responsive").$(byText("Student Email")).parent().shouldHave(text("Ivan@gmail.com"));
+        $(".table-responsive").$(byText("Gender")).parent().shouldHave(text("Male"));
+        $(".table-responsive").$(byText("Mobile")).parent().shouldHave(text("81234567890"));
+        $(".table-responsive").$(byText("Date of Birth")).parent().shouldHave(text("31 May,1990"));
         $(".table-responsive").$(byText("Subjects")).parent().shouldHave(text("Maths"));
         $(".table-responsive").$(byText("Hobbies")).parent().shouldHave(text("Sports"));
-        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("homework1.png"));
-        $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Bobryiskaya"));
+        $(".table-responsive").$(byText("Picture")).parent().shouldHave(text("homework1.jpg"));
+        $(".table-responsive").$(byText("Address")).parent().shouldHave(text("Moscow 111"));
         $(".table-responsive").$(byText("State and City")).parent().shouldHave(text("Uttar Pradesh Agra"));
 
         $("#closeLargeModal").click();
