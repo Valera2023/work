@@ -17,7 +17,7 @@ public class FirstTest {
     }
 
     @Test
-    void StudentRegistrationForm() {
+    void studentRegistrationForm() {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
@@ -39,9 +39,9 @@ public class FirstTest {
         $("#uploadPicture").uploadFromClasspath("Panda.jpg");
         $("#currentAddress").setValue("Moscow 111");
         $("#state").click();
-        $("#react-select-3-option-1").click();
+        $("#stateCity-wrapper").$(byText("Uttar Pradesh")).click();
         $("#city").click();
-        $("#react-select-4-option-0").click();
+        $("#stateCity-wrapper").$(byText("Agra")).click();
 
         $("#submit").click();
 
